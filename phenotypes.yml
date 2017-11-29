@@ -1,0 +1,16 @@
+info:
+  title: Phenotypes
+  description: Phenotypes
+  icon: "fa fa-user"
+  version: 0.1
+  sortOrder: 0
+  base: Phenotypes
+definitions:
+  Phenotypes:
+    type: object
+    properties:
+      phenotypes:
+        type: array
+        description: List of observed phenotypes, in HPO format
+        items:
+          type: string

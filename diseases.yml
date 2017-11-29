@@ -1,0 +1,29 @@
+info:
+  title: Diseases
+  description: Diseases
+  icon: "fa fa-user"
+  version: 0.1
+  sortOrder: 0
+  base: Diseases
+definitions:
+  Diseases:
+    type: object
+    properties:
+      diseases:
+        type: array
+        description: List of diseases in OMIM format, plus age at diagnosis and additional comments
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+              description: An OMIM-formatted disease ID
+            ageAtDiagnosis:
+              type: string
+              description: How old the patient was at diagnosis
+            orderingPhysician:
+              type: string
+              description: Information about the physician who ordered this test
+            comments:
+              type: string
+              description: Additional disease information not covered by the above

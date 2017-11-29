@@ -1,0 +1,90 @@
+info:
+  title: Pedigree
+  description: Pedigree
+  icon: "fa fa-user"
+  version: 0.1
+  sortOrder: 0
+  base: Pedigree
+definitions:
+  Pedigree:
+    type: object
+    description: List of known family members whose cases are also known
+    properties:
+      familyMembers:
+        type: array
+        items:
+          type: object
+          properties:
+            relation:
+              type: string
+              description: Relation to the patient
+              enum:
+                - Self
+                - Mother
+                - Father
+                - Sister
+                - Brother
+                - Maternal Half Sister
+                - Maternal Half Brother
+                - Paternal Half Sister
+                - Paternal Half Brother
+                - Daughter
+                - Son
+                - Maternal Grandmother
+                - Maternal Grandfather
+                - Paternal Grandmother
+                - Paternal Grandfather
+                - Maternal Aunt's Son
+                - Maternal Aunt's Daughter
+                - Maternal Uncle's Son
+                - Maternal Uncle's Daughter
+                - Paternal Aunt's Son
+                - Paternal Aunt's Daughter
+                - Paternal Uncle's Son
+                - Paternal Uncle's Daughter
+                - Maternal Female Cousin
+                - Maternal Male Cousin
+                - Paternal Female Cousin
+                - Paternal Male Cousin
+                - Niece
+                - Nephew
+                - Maternal Uncle
+                - Maternal Aunt
+                - Paternal Uncle
+                - Paternal Aunt
+                - Maternal Great Grandmother
+                - Paternal Great Grandmother
+                - Maternal Great Grandfather
+                - Paternal Great Grandfather
+                - Maternal Great Uncle
+                - Paternal Great Uncle
+                - Maternal Great Aunt
+                - Paternal Great Aunt
+                - Maternal First Cousin Once Removed
+                - Paternal First Cousin Once Removed
+                - Maternal First Cousin Twice Removed
+                - Paternal First Cousin Twice Removed
+                - Maternal First Cousin Thrice Removed
+                - Paternal First Cousin Thrice Removed
+                - Maternal Second Cousin Once Removed
+                - Paternal Second Cousin Once Removed
+                - Maternal Second Cousin Twice Removed
+                - Paternal Second Cousin Twice Removed
+                - Maternal Second Cousin Thrice Removed
+                - Paternal Second Cousin Thrice Remove
+            familySide:
+              type: string
+              enum:
+                - Maternal
+                - Paternal
+              description: If the given relation is on the maternal or paternal side
+            gender:
+              type: string
+              enum:
+                - Male
+                - Female
+                - None
+              description: Gender of the relation.  Note that Swagger does not support Null, hence our usage of None.
+            caseId:
+              type: string
+              description: The associated case ID

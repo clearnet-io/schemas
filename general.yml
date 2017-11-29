@@ -1,0 +1,30 @@
+info:
+  title: Patient Information
+  description: Patient Information
+  icon: "fa fa-user"
+  version: 0.1
+  sortOrder: 0
+  base: General
+definitions:
+  General:
+    type: object
+    properties:
+      gender:
+        type: string
+        enum:
+          - Male
+          - Female
+          - None
+        description: Gender is one of [Male/Female/None].  Note that Swagger does not support Null, hence our usage of None.
+      country:
+        type: string
+        description: Country
+      city:
+        type: string
+        description: City
+      state:
+        type: string
+        description: State
+      zip:
+        type: string
+        description: Zip/postal code

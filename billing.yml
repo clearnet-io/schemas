@@ -1,0 +1,22 @@
+info:
+  title: Billing
+  description: Billing
+  icon: "fa fa-user"
+  version: 0.1
+  sortOrder: 0
+  base: Billing
+definitions:
+  Billing:
+    type: object
+    properties:
+      codes:
+        type: array
+        items:
+          type: string
+        description: A listing of ICD codes
+      codeType:
+        type: string
+        enum:
+          - ICD9
+          - ICD10
+        description: One of [ICD9, ICD10] indicating to which vocabulary the codes array maps

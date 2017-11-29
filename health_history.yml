@@ -1,0 +1,42 @@
+info:
+  title: Health History
+  description: Health History
+  icon: "fa fa-user"
+  version: 0.1
+  sort: 2
+  base: HealthHistory
+definitions:
+  HealthHistory:
+    type: object
+    description: Personal health history of the patient
+    properties:
+      mutations:
+        type: array
+        description: Previously observed genetic mutations of note
+        items:
+          type: object
+          properties:
+            gene:
+              type: string
+              description: The gene name
+            variant:
+              type: string
+              description: The variant in HGVS format
+      history:
+        type: array
+        description: Healthy history
+        items:
+          type: object
+          properties:
+            ageAtDiagnosis:
+              type: string
+              description: The age of the patient at the time of diagnosis for this mutation
+            pathologyType:
+              type: string
+              description: What type of pathological investigation was performed
+            pathologyResult:
+              type: string
+              description: Outcome of the pathological investigation
+            cancerType:
+              type: string
+              description: The type of observed cancer
